@@ -39,6 +39,14 @@ import java.util.TreeMap;
         this.clusters = clusters;
     }
 
+
+     /**
+      * This method prepares the output Set of the algorithm given the input options
+      * performs the optimization step if required
+      * @author Khiari Youssef
+      * @return
+      * @throws Exception
+      */
     private Map<String,? extends DataSet> prepareDataSetForClustering() throws Exception {
 
             if (withOptimization) {
@@ -83,6 +91,7 @@ import java.util.TreeMap;
 
     }
 
+
      @Override
      public void run() {
         System.out.println("running ClusterThread");
@@ -107,6 +116,15 @@ import java.util.TreeMap;
          clusterThread.start();
     }
 
+     /**
+      * this is a recursive methods that returns the result sets after the algorithm converges.
+      * the output of each iterations is passed as input the next one.
+      * each iteration calculates the new centroids , refreshes the new cluster and checks convergence.
+      * @param currentDataClusters
+      * @param currentiteration
+      * @return
+      * @throws Exception
+      */
     private Map<String,DataCluster> kmeansIterations(Map<String,? extends  DataSet> currentDataClusters,int currentiteration) throws Exception {
         boolean isStable = true;
         Map<String,DataCluster> newDataClusters = new TreeMap<String, DataCluster>();
@@ -146,6 +164,13 @@ import java.util.TreeMap;
 
     }
 
+     /**
+      * this methods checks wether the algorithms converges or not
+      * convergence is achieved when the old dataset matches the new one.
+      * @param oldcluster
+      * @param newcluster
+      * @return
+      */
     public boolean  isStable(DataCluster oldcluster , DataCluster newcluster) {
         if (oldcluster.getDataPoints().size() != newcluster.getDataPoints().size()) {
             return(false);
@@ -161,8 +186,14 @@ import java.util.TreeMap;
         }
     }
 
-    // k-means++ algorithm implementation
-    private List<DataPoint> kmeansCentroidInitializer( int k) throws  Exception{
+     /**
+      * this method implements the kmeans++ algorithms which optimizes the kmeans iterations
+      * the method is called before the iterations start, it costs more time complexity if used and reduces the eventual iterations taken by the kmeans algorithm.
+      * @param clusters
+      * @return
+      * @throws Exception
+      */
+    private List<DataPoint> kmeansCentroidInitializer( int clusters) throws  Exception{
         List<DataPoint> centroids = new ArrayList<>();
         DataPoint firstCenter = new DataPoint(2,"c1");
         firstCenter.getComponents().add(1d);
@@ -170,8 +201,8 @@ import java.util.TreeMap;
         centroids.add(firstCenter);
 
         // first center selected
-        if (k > 1) {
-            for (int i = 0; i < k - 1; i++) {
+        if (clusters > 1) {
+            for (int i = 0; i < clusters - 1; i++) {
                 double squaredDistancesSum = 0;
                 // calculate the square of the distance between each point and its nearest center
                 for (DataPoint dp : dataSet.getDataPoints()) {
