@@ -1,7 +1,7 @@
-package UnsupervisedLearning;
+package com.datatoolkit.dataClustering;
 
-import UnsupervisedLearning.ClusteringData.DataPoint;
-import UnsupervisedLearning.ClusteringData.DataSet;
+import com.datatoolkit.dataClustering.ClusteringData.DataPoint;
+import com.datatoolkit.dataClustering.ClusteringData.DataSet;
 
 import java.util.ArrayList;
 import java.util.List;

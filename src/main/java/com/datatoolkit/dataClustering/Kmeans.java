@@ -1,11 +1,11 @@
-package UnsupervisedLearning;
+package com.datatoolkit.dataClustering;
 
-import UnsupervisedLearning.ClusterExceptions.InsufficientDataSizeException;
-import UnsupervisedLearning.ClusteringData.DataCluster;
-import UnsupervisedLearning.ClusteringData.DataPoint;
-import UnsupervisedLearning.ClusteringData.DataSet;
-import UnsupervisedLearning.Listeners.ClusteringResultListener;
-import UnsupervisedLearning.utils.MLmathTools;
+import com.datatoolkit.dataClustering.ClusterExceptions.InsufficientDataSizeException;
+import com.datatoolkit.dataClustering.ClusteringData.DataCluster;
+import com.datatoolkit.dataClustering.ClusteringData.DataPoint;
+import com.datatoolkit.dataClustering.ClusteringData.DataSet;
+import com.datatoolkit.dataClustering.Listeners.ClusteringResultListener;
+import com.datatoolkit.dataClustering.utils.MLmathTools;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package UnsupervisedLearning.ClusteringData;
+package com.datatoolkit.dataClustering.ClusteringData;
 
 import java.util.ArrayList;
 import java.util.List;

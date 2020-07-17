@@ -1,8 +1,8 @@
-package UnsupervisedLearning.utils;
+package com.datatoolkit.dataClustering.utils;
 
-import UnsupervisedLearning.ClusterExceptions.IncompatibleVectorDimensionsException;
-import UnsupervisedLearning.ClusterExceptions.InsufficientDataSizeException;
-import UnsupervisedLearning.ClusteringData.DataPoint;
+import com.datatoolkit.dataClustering.ClusterExceptions.IncompatibleVectorDimensionsException;
+import com.datatoolkit.dataClustering.ClusterExceptions.InsufficientDataSizeException;
+import com.datatoolkit.dataClustering.ClusteringData.DataPoint;
 
 import java.util.ArrayList;
 import java.util.List;

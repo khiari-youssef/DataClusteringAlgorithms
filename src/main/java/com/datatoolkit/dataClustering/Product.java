@@ -1,6 +1,4 @@
-package UnsupervisedLearning;
-
-import UnsupervisedLearning.ClusteringData.DataPoint;
+package com.datatoolkit.dataClustering;
 
 public class Product  {
 

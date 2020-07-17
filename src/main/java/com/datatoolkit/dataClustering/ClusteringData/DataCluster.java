@@ -1,4 +1,4 @@
-package UnsupervisedLearning.ClusteringData;
+package com.datatoolkit.dataClustering.ClusteringData;
 
 public class DataCluster extends DataSet {
 

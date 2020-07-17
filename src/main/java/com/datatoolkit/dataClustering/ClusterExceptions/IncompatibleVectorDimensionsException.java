@@ -1,4 +1,4 @@
-package UnsupervisedLearning.ClusterExceptions;
+package com.datatoolkit.dataClustering.ClusterExceptions;
 
 public class IncompatibleVectorDimensionsException extends Exception {
 

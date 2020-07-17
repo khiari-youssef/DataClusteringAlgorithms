@@ -1,6 +1,6 @@
-package UnsupervisedLearning.Listeners;
+package com.datatoolkit.dataClustering.Listeners;
 
-import UnsupervisedLearning.ClusteringData.DataSet;
+import com.datatoolkit.dataClustering.ClusteringData.DataSet;
 
 import java.util.Map;
 

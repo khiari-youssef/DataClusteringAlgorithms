@@ -1,8 +1,7 @@
-package UnsupervisedLearning;
+package com.datatoolkit.dataClustering;
 
 
-import UnsupervisedLearning.Listeners.ClusteringResultListener;
-
+import com.datatoolkit.dataClustering.Listeners.ClusteringResultListener;
 
 
 public interface KmeansClusterable {

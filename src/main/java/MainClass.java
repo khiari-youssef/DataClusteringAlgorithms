@@ -1,9 +1,9 @@
-import UnsupervisedLearning.ClusterAlgorithm;
-import UnsupervisedLearning.ClusterManager;
-import UnsupervisedLearning.ClusteringData.DataPoint;
-import UnsupervisedLearning.ClusteringData.DataSet;
-import UnsupervisedLearning.KmeansClusterable;
-import UnsupervisedLearning.Listeners.ClusteringResultListener;
+import com.datatoolkit.dataClustering.ClusterAlgorithm;
+import com.datatoolkit.dataClustering.ClusterManager;
+import com.datatoolkit.dataClustering.ClusteringData.DataPoint;
+import com.datatoolkit.dataClustering.ClusteringData.DataSet;
+import com.datatoolkit.dataClustering.KmeansClusterable;
+import com.datatoolkit.dataClustering.Listeners.ClusteringResultListener;
 
 import java.util.ArrayList;
 import java.util.List;
