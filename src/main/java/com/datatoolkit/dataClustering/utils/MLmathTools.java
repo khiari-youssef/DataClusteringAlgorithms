@@ -91,9 +91,12 @@ public class MLmathTools {
      public static double  minDistance(List<DataPoint> centroids , DataPoint dataPoint) throws Exception {
         int n = centroids.size();
         if (n == 1) {
-             double d = euclidianDistance(centroids.get(0),dataPoint);
-             return(d);
-        } else {
+            return(euclidianDistance(centroids.get(0),dataPoint));
+        } else if (n<1) {
+            throw  new InsufficientDataSizeException(n);
+        }
+        else
+       {
             ArrayList<DataPoint> firsthalf = new ArrayList<DataPoint>(n/2);
             ArrayList<DataPoint> secondhalf = new ArrayList<DataPoint>(n/2);
             for (int i=0; i<n/2; i++) {
